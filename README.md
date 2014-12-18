@@ -1,19 +1,26 @@
-Tool to cleanup redis tags from cron
+
+Magento Shell Script - Redis Clean Up
 ====================================
+
+[Simplified version forked from `samm-git/cm_redis_tools`]
+
+Installation
+------------
+Just copy `rediscli.php` in your Magento installation root inside `/shell/` dir
+
+Note: 
+The script requires `Credis` extension (https://github.com/colinmollenhour/Cm_Cache_Backend_Redis).  
+
 
 rediscli.php
 ------------
-cleaning tags using Redis cache backend 
-(https://github.com/colinmollenhour/Cm_Cache_Backend_Redis).  
+Cleaning tags using Redis cache backend 
   
-	Usage: rediscli.php <args>
-	    -s <server> - server address  
-	    -p <port> - server port  
-	    -v - show process status  
-	    -d <databases> - list of the databases, comma separated  
-	Example: rediscli.php -s 127.0.0.1 -p 6379 -d 0,1  
+        Usage: php -f rediscli.php [options]
 
-rediscache.php
--------------
-shows "map" of the cache interactively. "." indicates non-empty tag and +
-empty.
+            -s <server> - server address
+            -p <port> - server port
+            -d <database list> - list of the databases, comma separated
+            -m <mode> [all|old] old is default mode
+            -v show status messages
+        Example: php -f rediscli.php -s 127.0.0.1 -p 6379 -d 0,1
