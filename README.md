@@ -2,13 +2,18 @@
 Magento Shell Script - Redis Clean Up
 ====================================
 
-[Simplified version forked from `samm-git/cm_redis_tools`]
+Forked from `samm-git/cm_redis_tools`:  
+- Fixed include problems
+- Removed un-necessery lib files
+- Converted to Magento Shell Script
+- Added Clean Mode
+
 
 Installation
 ------------
 Just copy `rediscli.php` in your Magento installation root inside `/shell/` dir
 
-Note: 
+Note:  
 The script requires `Credis` extension (https://github.com/colinmollenhour/Cm_Cache_Backend_Redis).  
 
 
@@ -23,4 +28,5 @@ Cleaning tags using Redis cache backend
             -d <database list> - list of the databases, comma separated
             -m <mode> [all|old] old is default mode
             -v show status messages
+            
         Example: php -f rediscli.php -s 127.0.0.1 -p 6379 -d 0,1
