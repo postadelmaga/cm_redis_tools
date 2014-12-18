@@ -10,14 +10,14 @@ class Rediscli extends Mage_Shell_Abstract
     public function usageHelp()
     {
         return <<<USAGE
-Usage: php -f rediscli.php [options]
+        Usage: php -f rediscli.php [options]
 
             -s <server> - server address
             -p <port> - server port
             -d <database list> - list of the databases, comma separated
             -m <mode> [all|old] old is default mode
             -v show status messages
-            Example: php -f rediscli.php -s 127.0.0.1 -p 6379 -d 0,1
+        Example: php -f rediscli.php -s 127.0.0.1 -p 6379 -d 0,1
 
 USAGE;
     }
