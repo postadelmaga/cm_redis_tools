@@ -13,8 +13,8 @@ Installation
 ------------
 Just copy `rediscli.php` in your Magento installation root inside `/shell/` dir
 
-Note:  
-The script requires `Credis` extension (https://github.com/colinmollenhour/Cm_Cache_Backend_Redis).  
+**Note:**  
+It requires `Credis` extension (https://github.com/colinmollenhour/Cm_Cache_Backend_Redis).  
 
 
 rediscli.php
